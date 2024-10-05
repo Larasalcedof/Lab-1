@@ -30,15 +30,18 @@ Navegar al directorio del proyecto: Se cambia al directorio del proyecto clonado
 bash
 2. **Navegar al directorio del proyecto:**
 cd personapi-dotnet
+
 3. **Instalar las dependencias necesarias:**
 Se abre Visual Studio y se carga el proyecto. Luego, se va a la consola del Administrador de paquetes NuGet y se ejecutan los siguientes comandos para instalar las dependencias requeridas:
 Install-Package Microsoft.EntityFrameworkCore
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 Install-Package Microsoft.EntityFrameworkCore.Tools
+
 4.**Configurar Docker:**
 Se asegura que Docker esté instalado y en ejecución en la máquina. En la raíz del proyecto, se busca el archivo docker-compose.yml, que contiene la configuración necesaria para crear y ejecutar el contenedor de SQL Server. Luego, se abre una terminal en la raíz del proyecto y se ejecuta el siguiente comando para iniciar el contenedor:
 docker-compose up -d
 Esto iniciará el contenedor en segundo plano.
+
 5.**Configurar la Base de Datos:**
 La base de datos persona_db se crea automáticamente en el contenedor al ejecutar el proyecto. Se verifica que la cadena de conexión en appsettings.json esté configurada correctamente, la cual debería lucir así:
 json
@@ -50,8 +53,10 @@ Se debe reemplazar YourPassword con la contraseña configurada para el usuario s
 
 6.**Compilar el proyecto:**
  En Visual Studio, se selecciona Compilar > Compilar solución para asegurarse de que todo esté configurado correctamente.
+ 
 7.**Ejecutar la aplicación:**
  Una vez que la solución se haya compilado sin errores, se puede ejecutar la aplicación. Se presiona F5 o se selecciona Iniciar depuración para lanzar la aplicación en el navegador.
+ 
 8.**Acceder a Swagger**
 Una vez que la aplicación esté en ejecución, se accede a la documentación de la API en http://localhost:5000/swagger (puede variar según la configuración de puertos).
 
