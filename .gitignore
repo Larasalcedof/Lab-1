@@ -1,0 +1,7 @@
+# Archivos de Visual Studio
+.vs/
+.vscode/
+
+# Paquetes y builds
+bin/
+obj/
