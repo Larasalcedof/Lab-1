@@ -28,6 +28,7 @@ Para instalar el proyecto, se deben seguir los siguientes pasos:
    git clone https://github.com/Larasalcedof/personapi-dotnet.git
 Navegar al directorio del proyecto: Se cambia al directorio del proyecto clonado:
 bash
+
 2. **Navegar al directorio del proyecto:**
 cd personapi-dotnet
 
@@ -59,4 +60,62 @@ Se debe reemplazar YourPassword con la contraseña configurada para el usuario s
  
 8.**Acceder a Swagger**
 Una vez que la aplicación esté en ejecución, se accede a la documentación de la API en http://localhost:5000/swagger (puede variar según la configuración de puertos).
+
+## Estructura del Proyecto
+El proyecto está organizado de la siguiente manera:
+
+- **Controllers**: Contiene los controladores de la aplicación que manejan las solicitudes HTTP y devuelven las respuestas correspondientes.
+- **Models**: Aquí se encuentran los modelos que representan las entidades y las interfaces para el acceso a datos.
+  - **Entities**: Clases que representan las entidades del modelo de datos (Persona, Telefono, Profesion, Estudios).
+  - **Interfaces**: Contiene las interfaces para los repositorios, definiendo los contratos para las operaciones de datos.
+  - **Repositories**: Implementaciones de las interfaces que contienen la lógica para interactuar con la base de datos.
+- **Views**: Carpeta que contiene las vistas de la aplicación, donde se presentan los datos al usuario.
+- **appsettings.json**: Archivo de configuración que contiene las cadenas de conexión y otras configuraciones necesarias para la aplicación.
+- **Program.cs**: Punto de entrada de la aplicación, donde se configuran los servicios y la canalización de solicitudes.
+
+## EndPoints
+A continuación se detallan los endpoints disponibles en la API:
+
+### Persona
+- `GET /api/persona`: Obtiene una lista de todas las personas.
+- `GET /api/persona/{id}`: Obtiene una persona por su ID.
+- `POST /api/persona`: Crea una nueva persona.
+- `PUT /api/persona/{id}`: Actualiza una persona existente.
+- `DELETE /api/persona/{id}`: Elimina una persona.
+
+### Telefono
+- `GET /api/telefono`: Obtiene una lista de todos los teléfonos.
+- `GET /api/telefono/{id}`: Obtiene un teléfono por su ID.
+- `POST /api/telefono`: Crea un nuevo teléfono.
+- `PUT /api/telefono/{id}`: Actualiza un teléfono existente.
+- `DELETE /api/telefono/{id}`: Elimina un teléfono.
+
+### Profesion
+- `GET /api/profesion`: Obtiene una lista de todas las profesiones.
+- `GET /api/profesion/{id}`: Obtiene una profesión por su ID.
+- `POST /api/profesion`: Crea una nueva profesión.
+- `PUT /api/profesion/{id}`: Actualiza una profesión existente.
+- `DELETE /api/profesion/{id}`: Elimina una profesión.
+
+### Estudios
+- `GET /api/estudios`: Obtiene una lista de todos los estudios.
+- `GET /api/estudios/{id}`: Obtiene un estudio por su ID.
+- `POST /api/estudios`: Crea un nuevo estudio.
+- `PUT /api/estudios/{id}`: Actualiza un estudio existente.
+- `DELETE /api/estudios/{id}`: Elimina un estudio.
+
+## Uso de Swagger
+Swagger se ha integrado en la aplicación para proporcionar una interfaz visual que facilita la prueba de los endpoints de la API. Para acceder a Swagger, se debe abrir el navegador y dirigirse a `http://localhost:5000/swagger` después de haber iniciado la aplicación. Desde allí, se puede explorar y probar cada uno de los endpoints definidos en la API.
+
+## Contribución
+Las contribuciones son bienvenidas. Si se desea contribuir al proyecto, se puede seguir estos pasos:
+1. Realizar un fork del repositorio.
+2. Crear una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Realizar los cambios y hacer commit (`git commit -m 'Añadir nueva característica'`).
+4. Hacer push a la rama (`git push origin feature/nueva-caracteristica`).
+5. Crear un nuevo Pull Request.
+
+## Licencia
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulte el archivo `LICENSE`.
+
 
